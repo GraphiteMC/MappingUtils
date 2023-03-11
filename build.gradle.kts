@@ -1,5 +1,6 @@
 plugins {
     kotlin("jvm") version "1.8.10"
+    id("maven-publish")
 }
 
 group = "net.graphitemc"
@@ -11,6 +12,11 @@ repositories {
 
 dependencies {
     implementation("org.ow2.asm:asm:9.4")
+}
+
+java {
+    withSourcesJar()
+    withJavadocJar()
 }
 
 kotlin {
