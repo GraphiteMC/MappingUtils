@@ -22,3 +22,11 @@ java {
 kotlin {
     jvmToolchain(17)
 }
+
+publishing {
+    publications {
+        register<MavenPublication>("maven") {
+            from(components["java"])
+        }
+    }
+}
